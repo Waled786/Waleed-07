@@ -76,8 +76,8 @@ export function Contact() {
 
   const channels = [
     { Icon: Mail, label: 'Email', value: PROFILE.email, href: `mailto:${PROFILE.email}` },
-    { Icon: Linkedin, label: 'LinkedIn', value: 'in/aaravmehta', href: PROFILE.linkedin },
-    { Icon: Github, label: 'GitHub', value: 'aaravmehta', href: PROFILE.github },
+    { Icon: Linkedin, label: 'LinkedIn', value: 'in/waleedjaved09', href: PROFILE.linkedin },
+    { Icon: Github, label: 'GitHub', value: 'Waled786', href: PROFILE.github },
     { Icon: MapPin, label: 'Location', value: PROFILE.location, href: undefined },
   ];
 

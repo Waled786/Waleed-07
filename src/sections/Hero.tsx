@@ -168,7 +168,7 @@ export function Hero() {
             >
               <img
                 src="https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Portrait of Aarav Mehta, senior software engineer"
+                alt="Portrait of Waleed Javed,software engineer"
                 className="aspect-[4/5] w-full object-cover"
                 loading="eager"
               />
@@ -180,7 +180,7 @@ export function Hero() {
               transition={{ duration: 5, ease: 'easeInOut', repeat: Infinity, delay: 1 }}
               className="glass absolute -left-4 bottom-10 hidden rounded-2xl px-4 py-3 shadow-soft sm:block"
             >
-              <p className="text-2xl font-extrabold text-secondary">9+</p>
+              <p className="text-2xl font-extrabold text-secondary">4+</p>
               <p className="text-xs text-muted">years shipping</p>
             </motion.div>
 

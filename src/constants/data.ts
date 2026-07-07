@@ -10,14 +10,14 @@ import {
 } from 'lucide-react';
 
 export const PROFILE = {
-  name: 'Aarav Mehta',
-  title: 'Senior Software Engineer',
+  name: 'Waleed Javed',
+  title: 'Software Engineer',
   tagline: 'I design and build resilient web products where clean architecture meets quiet, deliberate craft.',
-  location: 'Bengaluru, India',
-  email: 'hello@aaravmehta.dev',
-  github: 'https://github.com/aaravmehta',
-  linkedin: 'https://linkedin.com/in/aaravmehta',
-  resumeUrl: '#',
+  location: 'Lahore, Pakistan',
+  email: 'javedwaleed323@gmail.com',
+  github: 'https://github.com/Waled786',
+  linkedin: 'https://www.linkedin.com/in/waleedjaved09',
+  resumeUrl: '/Resume.pdf',
   available: true,
 };
 
@@ -162,7 +162,7 @@ export const EXPERIENCE = [
     company: 'Northwind Labs',
     role: 'Staff Software Engineer',
     duration: '2023 — Present',
-    location: 'Bengaluru',
+    location: 'Lahore, Pakistan',
     summary:
       'Lead the platform group building developer-facing infrastructure used by 40+ internal teams.',
     points: [
@@ -220,7 +220,7 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.pexels.com/photos/7668073/pexels-photo-7668073.jpeg?auto=compress&cs=tinysrgb&w=1400',
     tech: ['Next.js', 'TypeScript', 'ClickHouse', 'Kafka', 'Redis'],
-    github: 'https://github.com/aaravmehta/lumen',
+    github: 'https://github.com/Waled786',
     live: 'https://lumen.example.com',
     accent: 'from-blue-500/20 to-cyan-400/20',
   },
@@ -231,7 +231,7 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1400',
     tech: ['Go', 'Terraform', 'Docker', 'GitHub Actions'],
-    github: 'https://github.com/aaravmehta/forge',
+    github: 'https://github.com/Waled786/forge',
     live: 'https://forge.example.com',
     accent: 'from-cyan-400/20 to-blue-500/20',
   },
@@ -242,7 +242,7 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.pexels.com/photos/5905789/pexels-photo-5905789.jpeg?auto=compress&cs=tinysrgb&w=1400',
     tech: ['Next.js', 'Cloudflare', 'Stripe', 'PostgreSQL'],
-    github: 'https://github.com/aaravmehta/atlas',
+    github: 'https://github.com/Waled786',
     live: 'https://atlas.example.com',
     accent: 'from-blue-500/20 to-cyan-400/20',
   },
@@ -253,7 +253,7 @@ export const PROJECTS: Project[] = [
     image:
       'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1400',
     tech: ['Python', 'pgvector', 'LangChain', 'FastAPI'],
-    github: 'https://github.com/aaravmehta/sage',
+    github: 'https://github.com/Waled786',
     live: 'https://sage.example.com',
     accent: 'from-cyan-400/20 to-blue-500/20',
   },
@@ -302,7 +302,7 @@ export const ACHIEVEMENTS = [
 export const TESTIMONIALS = [
   {
     quote:
-      'Aarav operates a level above the room. He turned a fragile prototype into a platform three teams now build on — and made it look effortless.',
+      'Waleed operates a level above the room. He turned a fragile prototype into a platform three teams now build on — and made it look effortless.',
     name: 'Priya Nair',
     role: 'VP Engineering, Northwind Labs',
     initials: 'PN',
@@ -323,7 +323,7 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      'He thinks in systems but cares about pixels. Working with Aarav is what senior engineering should feel like — calm, precise, dependable.',
+      'He thinks in systems but cares about pixels. Working with Waleed is what senior engineering should feel like — calm, precise, dependable.',
     name: 'David Okafor',
     role: 'CTO, Lumen',
     initials: 'DO',
