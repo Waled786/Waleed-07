@@ -15,7 +15,7 @@ import { SectionHeading } from '../components/SectionHeading';
 import { Magnetic } from '../components/Magnetic';
 import { PROFILE } from '../constants/data';
 import { container, fadeUp, slideLeft, slideRight, viewportOnce } from '../animations/variants';
-import { supabase } from '../utils/supabase';
+
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 type Errors = { name?: string; email?: string; message?: string };
@@ -38,21 +38,34 @@ export function Contact() {
 
   const onSubmit = async (ev: React.FormEvent) => {
     ev.preventDefault();
+
     if (!validate()) return;
+
     setStatus('loading');
+
     try {
-      const { error } = await supabase.from('contact_messages').insert({
-        name: form.name.trim(),
-        email: form.email.trim(),
-        message: form.message.trim(),
-      });
-      if (error) throw error;
+      // EmailJS integration yahan hogi baad mein
+
+      console.log(form);
+
       setStatus('success');
-      setForm({ name: '', email: '', message: '' });
-      setTimeout(() => setStatus('idle'), 4000);
-    } catch {
+      setForm({
+        name: '',
+        email: '',
+        message: '',
+      });
+
+      setTimeout(() => {
+        setStatus('idle');
+      }, 4000);
+    } catch (error) {
+      console.error(error);
+
       setStatus('error');
-      setTimeout(() => setStatus('idle'), 4000);
+
+      setTimeout(() => {
+        setStatus('idle');
+      }, 4000);
     }
   };
 
