@@ -29,11 +29,10 @@ export function Navbar() {
         className="fixed inset-x-0 top-0 z-50"
       >
         <div
-          className={`mx-auto flex items-center justify-between transition-all duration-500 ease-smooth ${
-            scrolled
+          className={`mx-auto flex items-center justify-between transition-all duration-500 ease-smooth ${scrolled
               ? 'mt-3 max-w-shell rounded-full border border-border/80 bg-card/85 px-4 py-2.5 shadow-soft backdrop-blur-xl md:px-6'
               : 'mt-0 max-w-none border-b border-transparent bg-transparent px-edge-sm py-5 md:px-edge'
-          }`}
+            }`}
         >
           {/* Logo */}
           <button
@@ -42,7 +41,7 @@ export function Navbar() {
             aria-label="Go to top"
           >
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-secondary text-sm font-extrabold text-white shadow-soft transition-transform duration-300 group-hover:scale-105">
-              AM
+              WJ
             </span>
             <span className="hidden text-sm font-bold tracking-tight text-secondary sm:block">
               {PROFILE.name}
@@ -57,9 +56,8 @@ export function Navbar() {
                 <button
                   key={link.id}
                   onClick={() => go(link.id)}
-                  className={`relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors duration-300 ${
-                    isActive ? 'text-primary' : 'text-muted hover:text-secondary'
-                  }`}
+                  className={`relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors duration-300 ${isActive ? 'text-primary' : 'text-muted hover:text-secondary'
+                    }`}
                 >
                   {link.label}
                   {isActive && (
@@ -137,11 +135,10 @@ export function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.06 * i + 0.1, duration: 0.4, ease: EASE_SMOOTH }}
                     onClick={() => go(link.id)}
-                    className={`flex items-center justify-between rounded-2xl px-4 py-3.5 text-left text-base font-semibold transition-colors ${
-                      active === link.id
+                    className={`flex items-center justify-between rounded-2xl px-4 py-3.5 text-left text-base font-semibold transition-colors ${active === link.id
                         ? 'bg-hover text-primary'
                         : 'text-secondary hover:bg-hover/60'
-                    }`}
+                      }`}
                   >
                     {link.label}
                     <span className="text-xs font-normal text-muted">0{i + 1}</span>

@@ -167,7 +167,7 @@ export function Hero() {
               className="glow-ring overflow-hidden rounded-[1.75rem] border border-white/60 bg-card"
             >
               <img
-                src="https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src="/profile.jpeg"
                 alt="Portrait of Waleed Javed,software engineer"
                 className="aspect-[4/5] w-full object-cover"
                 loading="eager"
@@ -189,8 +189,8 @@ export function Hero() {
               transition={{ duration: 5.5, ease: 'easeInOut', repeat: Infinity, delay: 0.5 }}
               className="glass absolute -right-3 top-12 hidden rounded-2xl px-4 py-3 shadow-soft sm:block"
             >
-              <p className="text-sm font-bold text-secondary">100</p>
-              <p className="text-xs text-muted">Lighthouse avg</p>
+              <p className="text-sm font-bold text-secondary"></p>
+              <p className="text-xs text-muted"></p>
             </motion.div>
           </motion.div>
         </motion.div>
