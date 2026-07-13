@@ -14,6 +14,7 @@ import { Section } from '../layouts/Section';
 import { SectionHeading } from '../components/SectionHeading';
 import { Magnetic } from '../components/Magnetic';
 import { PROFILE } from '../constants/data';
+import emailjs from "@emailjs/browser";
 import { container, fadeUp, slideLeft, slideRight, viewportOnce } from '../animations/variants';
 
 
@@ -36,6 +37,10 @@ export function Contact() {
     return Object.keys(e).length === 0;
   };
 
+  console.log("SERVICE:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
+  console.log("TEMPLATE:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+  console.log("PUBLIC:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+
   const onSubmit = async (ev: React.FormEvent) => {
     ev.preventDefault();
 
@@ -46,7 +51,16 @@ export function Contact() {
     try {
       // EmailJS integration yahan hogi baad mein
 
-      console.log(form);
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
 
       setStatus('success');
       setForm({
@@ -59,14 +73,41 @@ export function Contact() {
         setStatus('idle');
       }, 4000);
     } catch (error) {
-      console.error(error);
+      console.error("EMAILJS ERROR:", error);
 
-      setStatus('error');
+      if (error instanceof Error) {
+        console.error(error.message);
+      }
 
-      setTimeout(() => {
-        setStatus('idle');
-      }, 4000);
+      setStatus("error");
     }
+    // catch (error) {
+    //   try {
+    //     const result = await emailjs.send(
+    //       import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    //       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    //       {
+    //         from_name: form.name,
+    //         from_email: form.email,
+    //         message: form.message,
+    //       },
+    //       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    //     );
+
+    //     console.log("SUCCESS", result);
+
+    //     setStatus("success");
+    //   }
+    //   catch (error) {
+    //     console.error("FAILED", error);
+    //   }
+
+    //   setStatus('error');
+
+    //   setTimeout(() => {
+    //     setStatus('idle');
+    //   }, 4000);
+    // }
   };
 
   const update = (key: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
